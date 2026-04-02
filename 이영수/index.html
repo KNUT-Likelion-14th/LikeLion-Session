@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>자기소개 | 이영수</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <h1 class="brand">LEE YOUNGSU</h1>
+        <div class="menu">
+          <a href="#about">소개</a>
+          <a href="#skills">스킬</a>
+          <a href="#projects">프로젝트</a>
+          <a href="#contact">연락</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">INTRODUCTION</p>
+        <h2>안녕하세요, <span>이영수</span>입니다.</h2>
+        <p class="desc">
+          프론트 세션 23살 이영수입니다. 사용자에게 깔끔하고 편한 웹 경험을 만드는 걸 좋아합니다.
+        </p>
+        <div class="chips">
+          <span>세션: 프론트</span>
+          <span>나이: 23</span>
+          <span>이메일: leeys4903@naver.com</span>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <div class="container">
+          <h3>소개</h3>
+          <p>
+            구조적인 UI와 깔끔한 인터랙션을 좋아하고, 유지보수하기 쉬운 코드를 지향합니다.
+            팀원과의 소통과 기록도 중요하게 생각합니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h3>스킬</h3>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>TypeScript</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <h3>프로젝트</h3>
+          <p>이 부분은 직접 수정해서 사용하면 됩니다.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact">
+          <h3>연락</h3>
+          <a href="mailto:leeys4903@naver.com">leeys4903@naver.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© <span id="year"></span> 이영수</div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
