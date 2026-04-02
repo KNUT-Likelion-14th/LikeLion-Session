@@ -1,0 +1,303 @@
+:root {
+    --bg-color: #050505;
+    --surface-color: #121212;
+    --surface-light: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-primary: #3b82f6;
+    --accent-secondary: #8b5cf6;
+    --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --card-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 3rem 2rem;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.profile-img-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+}
+
+.profile-glow {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: var(--gradient-accent);
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.6;
+    animation: pulse 4s infinite alternate;
+}
+
+.profile-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-color);
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.profile-img span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.name .title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.role {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    color: var(--accent-primary);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.info-card {
+    background: var(--surface-color);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.info-card.highlight:hover {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.15);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.info-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.about-section {
+    background: var(--surface-color);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-accent);
+}
+
+.about-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.about-section p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: var(--surface-light);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--gradient-accent);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    100% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .name { font-size: 2rem; }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section {
+        padding: 1.5rem;
+    }
+}
