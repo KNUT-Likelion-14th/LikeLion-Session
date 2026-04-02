@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조성현 | 포트폴리오</title>
+    <meta name="description" content="조성현의 포트폴리오 웹사이트입니다.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">CSH.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>안녕하세요, <br><span class="gradient-text">조성현</span>입니다.</h1>
+                    <p class="typing-text"></p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn">프로젝트 보기</a>
+                        <a href="#contact" class="btn secondary-btn">연락하기</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- 이미지를 넣을 수 있는 공간입니다. img 태그를 추가하고 스타일을 적용할 수 있습니다. -->
+                    <div class="image-placeholder" id="profile-image-container">
+                        <img src="https://avatars.githubusercontent.com/u/133869563?v=4" alt="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>프론트엔드 개발에 열정을 가지고 있는 개발자 조성현입니다. <br>
+                사용자 경험을 중시하며, 아름답고 직관적인 UI를 구현하는 것을 즐깁니다. <br>
+                새로운 기술을 배우고 적용하는 데 주저함이 없으며, 끊임없이 성장하고자 합니다.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <!-- 프로젝트 카드 1 -->
+                <div class="project-card">
+                    <div class="project-img-placeholder">Project 1 Image</div>
+                    <div class="project-info">
+                        <h3>멋쟁이사자처럼 과제</h3>
+                        <p>멋쟁이사자처럼 활동하며 진행한 첫 번째 웹 프로젝트입니다. HTML, CSS, JS의 기본기를 다졌습니다.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 프로젝트 카드 2 -->
+                <div class="project-card">
+                    <div class="project-img-placeholder">Project 2 Image</div>
+                    <div class="project-info">
+                        <h3>개인 포트폴리오 사이트</h3>
+                        <p>모던한 디자인 트렌드를 반영하여 제작한 반응형 포트폴리오 사이트입니다.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS/Animations</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>새로운 기회와 흥미로운 프로젝트 제안을 언제나 환영합니다.</p>
+            <a href="mailto:email@example.com" class="btn primary-btn">이메일 보내기</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 조성현. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
