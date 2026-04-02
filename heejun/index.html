@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양희준 | 포트폴리오</title>
+    <!-- 폰트 적용 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- 아이콘 -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 배경 애니메이션용 Blob -->
+    <div class="blob-bg">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <!-- 내비게이션 바 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Heejun Yang</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 첫 화면 소개 -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <!-- 생성된 AI 이미지 사용 -->
+                    <img src="assets/dev_avatar.png" alt="Profile Picture" class="profile-img">
+                    <div class="status-badge">
+                        <span class="status-dot"></span> Available for work
+                    </div>
+                </div>
+                <h2 class="greeting">안녕하세요! <span>👋</span> 반가워요.</h2>
+                <h1 class="name">저는 <span class="highlight">양희준</span> 입니다.</h1>
+                <p class="role">한국교통대학교 소프트웨어학과 재학생 | 성장하는 예비 엔지니어</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn primary">연락하기</a>
+                    <a href="#about" class="btn secondary">더 알아보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 핵심 정보 -->
+        <section id="about" class="about glass-panel fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="ri-user-smile-line"></i>
+                    <h3>기본 정보</h3>
+                    <p><strong>이름:</strong> 양희준 (Yang Hee-jun)</p>
+                    <p><strong>생년월일:</strong> 2002. 07. 24 (25세)</p>
+                </div>
+                <div class="about-card">
+                    <i class="ri-graduation-cap-line"></i>
+                    <h3>학력</h3>
+                    <p><strong>학교:</strong> 한국교통대학교</p>
+                    <p><strong>전공:</strong> 소프트웨어학과 재학 중</p>
+                </div>
+                <div class="about-card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <h3>목표</h3>
+                    <p>사용자 친화적이고 직관적인 UI/UX와, 탄탄한 로직을 고민하며 꾸준히 스킬업을 하는 개발자가 되고 싶습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 스킬 및 관심사 -->
+        <section id="skills" class="skills fade-in">
+            <h2 class="section-title">My Interests & Skills</h2>
+            <div class="skills-container">
+                <div class="skill-tag"><span>HTML5/CSS3</span></div>
+                <div class="skill-tag"><span>JavaScript</span></div>
+                <div class="skill-tag"><span>React</span></div>
+                <div class="skill-tag"><span>UI/UX Design</span></div>
+                <div class="skill-tag"><span>Python</span></div>
+                <div class="skill-tag"><span>C / C++</span></div>
+                <div class="skill-tag"><span>알고리즘 문제해결</span></div>
+            </div>
+        </section>
+
+        <!-- 연락처 -->
+        <section id="contact" class="contact glass-panel fade-in">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>프로젝트 협업, 사이드 프로젝트 제안, 커피챗 모두 환영합니다!</p>
+            <div class="social-links">
+                <a href="#" class="social-btn"><i class="ri-mail-send-line"></i> 이메일 보내기</a>
+                <a href="#" class="social-btn"><i class="ri-github-fill"></i> GitHub</a>
+                <a href="#" class="social-btn"><i class="ri-instagram-line"></i> Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heejun Yang. All rights reserved.</p>
+    </footer>
+
+    <!-- 스크립트 기능 -->
+    <script src="main.js"></script>
+</body>
+
+</html>
